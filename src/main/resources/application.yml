@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/retaurantDB?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ 
+ #specify DBMS 
+  jpa:
+    database: MYSQL
+    show-sql: false
+    
+  #ORM: Object Relational mapper hibernate : ddl-auto({update|create})
+  
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect:org.hibernate.dialect.MySQLDialect
+        
+        
+server:
+  port: 8801
+    
